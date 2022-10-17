@@ -1,16 +1,14 @@
 import discord
 from dotenv import load_dotenv
 import os
-import random
-from time import sleep
-import requests
 from pokiAPI.pokimon import get_details
+
 load_dotenv() #load in env vars
 
 
 intents = discord.Intents.all()
 
-bot = discord.Client(intents=intents)
+bot = discord.Bot(intents=intents)
 
 @bot.event
 async def on_ready():
